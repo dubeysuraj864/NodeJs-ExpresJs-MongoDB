@@ -55,9 +55,6 @@
 
 // Q- What does http module
 // ans- it handles the request and response of the server in node js
-
-
-
 /* --------------------------------
     All about package.json
     1. What is the package file?
@@ -76,10 +73,10 @@
     // now What is package-lock.json, well package.json contain all details about project, and package-lock contains details about package.json
     5.Interview question
     // 
-*/ 
+*/
 
-const colors = require('colors')
-console.log("hello.json".bgBlue)
+// const colors = require('colors')
+// console.log("hello.json".bgBlue)
 
 // small challenge for you
 // Q1.what happens if the node_module folder got deleted?
@@ -94,3 +91,55 @@ console.log("hello.json".bgBlue)
     git push -u origin master
 */
 
+// package and module are the same thing, only they have different names.
+
+/*
+    Nodemon | time saving module
+    Q1.What is the Nodemon package?
+    Q2.How to install it?
+    Q3.How to use it?
+    Q4.Interview Question.
+
+
+    how to install
+
+    npm i nodemon -g // -g means globally
+
+*/
+
+// console.warn(__dirname)
+
+/*
+
+    Node js is async
+
+    1.Run first script
+    2.Run second script( complex data )
+        ---- it will not wait to finish 2nd  script ----
+    3.Run third script
+    4.Continue
+
+*/
+
+/*
+
+        MAKE A SIMPLE API
+
+        1. Make a server,
+        2.create header and API body,
+        3.create an API with static data.
+        4.put data in another file.
+        5.Interview question
+
+*/
+
+
+let http = require('http');
+let data = require('./data');
+
+http.createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "application\json" });
+    res.write(JSON.stringify(data));
+    res.end();
+  })
+  .listen(8000);
