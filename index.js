@@ -143,3 +143,6 @@ http.createServer((req, res) => {
     res.end();
   })
   .listen(8000);
+
+//   here 200 is http status code which indicates that the request has succeeded.
+//  "https://www.whatismyip.com/images/https-codes.png"
