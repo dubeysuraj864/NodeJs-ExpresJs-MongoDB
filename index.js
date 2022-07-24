@@ -169,9 +169,21 @@
 // else{
 //     console.log("Invalid output")
 // }
+
+
+
 // --------------------------------
 // Show file list
 // -make files in a folder
 //- use path module
 //- get the file names and print
 //interview question
+
+const fs = require('fs');
+// fs.writeFileSync("apple.txt", "A Bunch of apples are here. Wanna eat?") 
+const path = require('path')
+const dirPath = path.join(__dirname,'files');
+console.warn(dirPath)
+for(i=0 ; i<5 ; i++){
+    fs.writeFileSync(`hello${[i]}.txt`,`a simple text file`)
+}
