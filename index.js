@@ -156,16 +156,22 @@
 
 // console.log(process.argv[4])
 
-const fs = require('fs');
-const input = process.argv;
+// const fs = require('fs');
+// const input = process.argv;
 
-if(input[2]=='add')
-{
-    fs.writeFileSync(input[3], input[4])
-}
-else if(input[2]=='remove'){
-    fs.unlinkSync(input[3])
-}
-else{
-    console.log("Invalid ouput")
-}
+// if(input[2]=='add')
+// {
+//     fs.writeFileSync(input[3], input[4])
+// }
+// else if(input[2]=='remove'){
+//     fs.unlinkSync(input[3])
+// }
+// else{
+//     console.log("Invalid output")
+// }
+// --------------------------------
+// Show file list
+// -make files in a folder
+//- use path module
+//- get the file names and print
+//interview question
