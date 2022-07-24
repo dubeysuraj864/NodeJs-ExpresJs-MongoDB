@@ -179,17 +179,30 @@
 //- get the file names and print
 //interview question
 
-const fs = require('fs');
+// const fs = require('fs');
 // fs.writeFileSync("apple.txt", "A Bunch of apples are here. Wanna eat?") 
-const path = require('path')
-const dirPath = path.join(__dirname,'files');
-console.warn(dirPath)
-for(let i=0 ; i<5 ; i++){
-    fs.writeFileSync(dirPath+"/hello"+i+".txt","a simple text file")
-}
+// const path = require('path')
+// const dirPath = path.join(__dirname,'files');
+// console.warn(dirPath)
+// for(let i=0 ; i<5 ; i++){
+//     fs.writeFileSync(dirPath+"/hello"+i+".txt","a simple text file")
+// }
 
-fs.readdir(dirPath,(err, files )=>{
-    files.forEach((item)=>{
-        console.log(item)
-    })
-})
+// fs.readdir(dirPath,(err, files )=>{
+//     files.forEach((item)=>{
+//         console.log(item)
+//     })
+// })
+
+//Q. what if we want to access another files which is located outside of current node directory?.
+// Ans. No, We can not access file that is located outside the current directory. When we code in command node .\index.js. At that time this command acts like web server. Also but we can access it force using some spacial modules. in html etc.by Default it cant access the files from outside the current directory.
+
+// --------------------------------------------------
+
+// CRUD with the file system
+// make file.
+// read file.
+// update file.
+// rename file.
+// delete file.
+// Interview questions
