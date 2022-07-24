@@ -134,15 +134,38 @@
 */
 
 
-let http = require('http');
-let data = require('./data');
+// let http = require('http');
+// let data = require('./data');
 
-http.createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "application\json" });
-    res.write(JSON.stringify(data));
-    res.end();
-  })
-  .listen(8000);
+// http.createServer((req, res) => {
+//     res.writeHead(200, { "Content-Type": "application\json" });
+//     res.write(JSON.stringify(data));
+//     res.end();
+//   })
+//   .listen(8000);
 
 //   here 200 is http status code which indicates that the request has succeeded.
 //  "https://www.whatismyip.com/images/https-codes.png"
+
+
+// input from command line
+// - set input from command line
+// - create file with input
+// - delete file from with input
+// - interview question
+
+// console.log(process.argv[4])
+
+const fs = require('fs');
+const input = process.argv;
+
+if(input[2]=='add')
+{
+    fs.writeFileSync(input[3], input[4])
+}
+else if(input[2]=='remove'){
+    fs.unlinkSync(input[3])
+}
+else{
+    console.log("Invalid ouput")
+}
