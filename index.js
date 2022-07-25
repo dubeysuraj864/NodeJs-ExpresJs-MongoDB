@@ -259,3 +259,47 @@
 
 // In Asynchronous, Second Task do not wait to finish first task.
 // for example we have three function Users(), Products() and Cities(), When execution will start it first load to Users() or then it move to next function which is products() even though loading was not finished. and it will execute all the functions. Will not wait to finish the loading.
+
+// example
+
+// console.log("start exe...")
+
+//     console.log("logic exe...")
+
+
+// console.log("complete exe...")
+
+// output 
+//start exe...
+// logic exe...
+// complete exe...
+
+// console.log("start exe...")
+
+// setTimeout(()=>{
+//     console.log("logic exe...")
+// },2000)
+
+// console.log("complete exe...")
+
+// output
+
+// start exe...
+// complete exe...
+// logic exe...
+
+
+// 2nd example
+
+// let a= 10; let b= 0;
+
+// setTimeout(()=>{
+//     b= 20;
+// },2000)
+
+// console.log(a+b)
+
+//drawback is output 10 XD
+// the actual value is 30.
+
+// So, Now How we can handle this problem?, Now callbacks and promises comes to picture!
