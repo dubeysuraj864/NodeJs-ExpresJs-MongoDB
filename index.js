@@ -208,10 +208,10 @@
 // Interview questions
 
 
-const fs = require('fs');
-const path = require('path')
-const dirPath = path.join(__dirname, 'crud')
-const filePath = `${dirPath}/apple.txt`;
+// const fs = require('fs');
+// const path = require('path')
+// const dirPath = path.join(__dirname, 'crud')
+// const filePath = `${dirPath}/apple.txt`;
 
 // create
 // fs.writeFileSync(filePath,'this is a simple text file')
@@ -245,4 +245,17 @@ const filePath = `${dirPath}/apple.txt`;
 
 // to deal with this we only just need to put 'utf8' just before the parameters.
 //  utf8 module from npm to encode/decode the string. Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string
-// Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string
+// Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string\
+
+
+// php is a synchronous language
+
+// Asynchronous Basic in Node.js - asynchronous languages are fast.
+
+// Asynchronous and Synchronous
+
+// In Synchronous operations tasks are performed one at a time.
+// For example we have three functions 1.Users. 2.Products 3.Cities. When execution will start it first load Users function and it still load Users util it not finished loading. It will wait for loading the function/code. After that it will move to next function and again for the next function the fully load.
+
+// In Asynchronous, Second Task do not wait to finish first task.
+// for example we have three function Users(), Products() and Cities(), When execution will start it first load to Users() or then it move to next function which is products() even though loading was not finished. and it will execute all the functions. Will not wait to finish the loading.
