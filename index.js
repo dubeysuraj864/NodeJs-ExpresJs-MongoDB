@@ -200,9 +200,41 @@
 // --------------------------------------------------
 
 // CRUD with the file system
-// make file.
+// create file.
 // read file.
 // update file.
 // rename file.
 // delete file.
 // Interview questions
+
+
+const fs = require('fs');
+const path = require('path')
+const dirPath = path.join(__dirname, 'crud')
+const filePath = `${dirPath}/apple.txt`;
+
+// create
+// fs.writeFileSync(filePath,'this is a simple text file')
+
+// read
+// fs.readFile(filePath,'utf8' ,(err, item) => {
+//     console.log(item)
+// })
+
+// update
+
+// fs.appendFile(filePath, ' and the file name is apple.txt', (err)=>{
+//     if(!err) console.log("file is updated.")
+// })
+
+//rename
+
+fs.rename(filePath,`${dirPath}/fruit.txt`, (err) => {
+    if(!err) console.log("file name is updated")
+})
+
+
+// out <Buffer 74 68 69 73 20 69 73 20 61 20 73 69 6d 70 6c 65 20 74 65 78 74 20 66 69 6c 65>
+// Now an interview question is that what is buffer.
+// to deal with this we only just need to put 'utf8' just before the parameters.
+//  utf8 module from npm to encode/decode the string. Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string
