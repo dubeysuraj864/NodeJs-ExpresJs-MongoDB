@@ -303,3 +303,24 @@
 // the actual value is 30.
 
 // So, Now How we can handle this problem?, Now callbacks and promises comes to picture!
+
+
+// let a= 20; let b= 0;
+
+// let waitingData = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         b=30
+//        resolve(30)
+//     },2000);
+// })
+
+// waitingData.then((data)=>{
+//     console.log(a+data)
+// })
+
+// How node js works?
+// 1.call stack
+// 2.node api
+// 3.callback queue
+// 4.example
+// 5.Interview question
