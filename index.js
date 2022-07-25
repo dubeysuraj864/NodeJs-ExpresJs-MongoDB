@@ -335,3 +335,39 @@
 
 // 4.example
 // 5.Interview question
+
+
+/* 
+// ---------------------------------------------------------------------- 
+
+INTRODUCTION TO EXPRESS JS
+
+1. What is Express Js
+//Its a framework that runs within nodejs that allows developers to create and maintain. servers. 
+
+
+2. Install Express 
+//  npm install express
+
+
+3. Make Example with express js.
+4.Interview Questions.
+
+uses- We can make APIs using Express js with less code than node js. provide routes, middleware easily, request handling like get, post, put and delete.
+
+
+*/
+
+const express = require('express')
+const app = express();
+
+app.get('', (req, res) => {
+    res.send('hello, this is a home page');
+})
+
+app.get('/help', (req, res) => {
+    res.send('hello, this is a help page');
+})
+
+
+app.listen(5000);
