@@ -228,13 +228,21 @@ const filePath = `${dirPath}/apple.txt`;
 // })
 
 //rename
+// fs.rename(filePath,`${dirPath}/fruit.txt`, (err) => {
+//     if(!err) console.log("file name is updated")
+// })
 
-fs.rename(filePath,`${dirPath}/fruit.txt`, (err) => {
-    if(!err) console.log("file name is updated")
-})
+// delete
+// fs.unlinkSync( `${dirPath}/fruit.txt`, (err)=> {
+//     if(!err) console.log("file deleted successfully")
+// })
 
 
 // out <Buffer 74 68 69 73 20 69 73 20 61 20 73 69 6d 70 6c 65 20 74 65 78 74 20 66 69 6c 65>
+
 // Now an interview question is that what is buffer.
+//buffer is a temporary memory location when we perform any operation upon file system node js needs some memory. same like our system needs ram.
+
 // to deal with this we only just need to put 'utf8' just before the parameters.
 //  utf8 module from npm to encode/decode the string. Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string
+// Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string
