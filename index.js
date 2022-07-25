@@ -317,10 +317,21 @@
 // waitingData.then((data)=>{
 //     console.log(a+data)
 // })
+/* https://felixgerschau.com/static/79486d91b22a7c1b4044fce88a4cae20/5a190/js-event-loop-explained.png */
+
 
 // How node js works?
 // 1.call stack
+//The call stack is a LIFO(Last in first out) stack, The event loop continuously checks the call stack to see if there's any function that needs to run. While doing so, it adds any functions call it finds in the call stack and execute each in order.
+
+
+
 // 2.node api
+// Node-APi is a toolkit introduced in Node 8.0.0 that acts as an intermediary between c/c++  code and the node javascript engine. it permits c/c++ code to access, create, and manipulate javascript objects as if they were created by javascript code. node api is built into versions 8.0
+
+
 // 3.callback queue
+// A function is added to the call stack when it is about to be executed. this helps javascript retrace its steps after executing a function. The callbacks queues are queues that hold callback function to asynchronous operations when they have been completed in background.
+
 // 4.example
 // 5.Interview question
