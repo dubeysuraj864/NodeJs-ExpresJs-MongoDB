@@ -421,12 +421,26 @@ const publicPath = path.join(__dirname, 'public');
 
 app.get("",(req, res)=>{
     res.send(`
-    <a href="about.html"> About <a>
-    <a href="contact.html"> Contact <a>
+    <a href="/about"> About <a>
+    <a href="/contact"> Contact <a>
     `)
 
 })
 
-app.use(express.static(publicPath))
+// app.use(express.static(publicPath))
+app.get('',(_, res)=>{
+res.sendFile(`${publicPath}/index.html`)
+})
+app.get('/contact',(_, res)=>{
+    res.sendFile(`${publicPath}/contact.html`)
+    })
+    
+    app.get('/about',(_, res)=>{
+        res.sendFile(`${publicPath}/about.html`)
+        })
+        app.get('*',(_, res)=>{
+            res.sendFile(`${publicPath}/404.html`)
+            })
+            
 
 app.listen(5000);
