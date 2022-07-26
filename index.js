@@ -456,24 +456,51 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // 4. Make dynamic pages
 // 5. Interview Questions.
 
+// const path = require('path');
+// const express = require('express');
+// const app = express();
+
+// const publicPath = path.join(__dirname, 'public')
+
+// app.set('view engine', 'ejs');
+
+// app.get('/profile', (req, res)=>{
+//     const user={
+//         name: "Suraj Dubey",
+//         email: "dubeysuraj864@gmail.com",
+//         city: 'Delhi',
+//     }
+//     res.render('profile', {user})
+
+// })
+
+// app.listen(5000)
+
+// console.log(publicPath)
+
+
+// Dynamic Page
+// 1. How to make loop in ejs.
+// 2. Make Header file.
+// 3. Show common header file.
+// 4. Interview Questions.
+
 const path = require('path');
 const express = require('express');
 const app = express();
+const publicPath = path.join(__dirname, 'views')
 
-const publicPath = path.join(__dirname, 'public')
+app.set('view engine', 'ejs')
 
-app.set('view engine', 'ejs');
+const user = {
+    name: "Suraj Dubey",
+    email: "dubeysuraj864@gmail.com",
+    city: "Delhi",
+    skills: ["HTML","CSS/Sass/SCSS", "JavaScript","React JS", "Vue Js", "Node JS","PHP","GitHub/Git"],
+}
 
-app.get('/profile', (req, res)=>{
-    const user={
-        name: "Suraj Dubey",
-        email: "dubeysuraj864@gmail.com",
-        city: 'Delhi',
-    }
-    res.render('profile', {user})
-
+app.get('/profile', (_,res)=>{
+    res.render('profile',{user});
 })
-
+ 
 app.listen(5000)
-
-console.log(publicPath)
