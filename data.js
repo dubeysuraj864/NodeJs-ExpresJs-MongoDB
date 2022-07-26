@@ -1,11 +1,11 @@
 const data=[
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
-    {name: 'Surah Durey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
+    {name: 'Suraj Dubey', email: 'dubeysuraj864@gmail.com'},
 
 ]
 

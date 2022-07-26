@@ -414,33 +414,66 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // 3. load html files
 // 4. Interview Question
 
-const express = require ('express');
-const path = require('path')
-const app = express();
-const publicPath = path.join(__dirname, 'public');
+// const express = require ('express');
+// const path = require('path')
+// const app = express();
+// const publicPath = path.join(__dirname, 'public');
 
-app.get("",(req, res)=>{
-    res.send(`
-    <a href="/about"> About <a>
-    <a href="/contact"> Contact <a>
-    `)
+// app.get("",(req, res)=>{
+//     res.send(`
+//     <a href="/about"> About <a>
+//     <a href="/contact"> Contact <a>
+//     `)
 
-})
+// })
 
 // app.use(express.static(publicPath))
-app.get('',(_, res)=>{
-res.sendFile(`${publicPath}/index.html`)
-})
-app.get('/contact',(_, res)=>{
-    res.sendFile(`${publicPath}/contact.html`)
-    })
+// app.get('',(_, res)=>{
+// res.sendFile(`${publicPath}/index.html`)
+// })
+// app.get('/contact',(_, res)=>{
+//     res.sendFile(`${publicPath}/contact.html`)
+//     })
     
-    app.get('/about',(_, res)=>{
-        res.sendFile(`${publicPath}/about.html`)
-        })
-        app.get('*',(_, res)=>{
-            res.sendFile(`${publicPath}/404.html`)
-            })
+//     app.get('/about',(_, res)=>{
+//         res.sendFile(`${publicPath}/about.html`)
+//         })
+//         app.get('*',(_, res)=>{
+//             res.sendFile(`${publicPath}/404.html`)
+//             })
             
 
-app.listen(5000);
+// app.listen(5000);
+
+// Template Engine
+// 1. What is the template engine?
+// Basically it is used for making dynamic pages. and it is installed by using npm like others.
+
+// 2. Install ejs template package
+// ejs are the most used. We can install it using npm install ejs.
+
+// 3. Setup dynamic routing
+// 4. Make dynamic pages
+// 5. Interview Questions.
+
+const path = require('path');
+const express = require('express');
+const app = express();
+
+const publicPath = path.join(__dirname, 'public')
+
+app.set('view engine', 'ejs');
+
+app.get('/profile', (req, res)=>{
+    const user={
+        name: "Suraj Dubey",
+        email: "dubeysuraj864@gmail.com",
+        city: 'Delhi',
+    }
+    res.render('profile', {user})
+
+})
+
+app.listen(5000)
+
+console.log(publicPath)
