@@ -413,3 +413,20 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // 2. make html files
 // 3. load html files
 // 4. Interview Question
+
+const express = require ('express');
+const path = require('path')
+const app = express();
+const publicPath = path.join(__dirname, 'public');
+
+app.get("",(req, res)=>{
+    res.send(`
+    <a href="about.html"> About <a>
+    <a href="contact.html"> Contact <a>
+    `)
+
+})
+
+app.use(express.static(publicPath))
+
+app.listen(5000);
