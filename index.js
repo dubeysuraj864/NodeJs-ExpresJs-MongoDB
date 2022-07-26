@@ -133,7 +133,6 @@
 
 */
 
-
 // let http = require('http');
 // let data = require('./data');
 
@@ -146,7 +145,6 @@
 
 //   here 200 is http status code which indicates that the request has succeeded.
 //  "https://www.whatismyip.com/images/https-codes.png"
-
 
 // input from command line
 // - set input from command line
@@ -170,8 +168,6 @@
 //     console.log("Invalid output")
 // }
 
-
-
 // --------------------------------
 // Show file list
 // -make files in a folder
@@ -180,7 +176,7 @@
 //interview question
 
 // const fs = require('fs');
-// fs.writeFileSync("apple.txt", "A Bunch of apples are here. Wanna eat?") 
+// fs.writeFileSync("apple.txt", "A Bunch of apples are here. Wanna eat?")
 // const path = require('path')
 // const dirPath = path.join(__dirname,'files');
 // console.warn(dirPath)
@@ -206,7 +202,6 @@
 // rename file.
 // delete file.
 // Interview questions
-
 
 // const fs = require('fs');
 // const path = require('path')
@@ -237,7 +232,6 @@
 //     if(!err) console.log("file deleted successfully")
 // })
 
-
 // out <Buffer 74 68 69 73 20 69 73 20 61 20 73 69 6d 70 6c 65 20 74 65 78 74 20 66 69 6c 65>
 
 // Now an interview question is that what is buffer.
@@ -246,7 +240,6 @@
 // to deal with this we only just need to put 'utf8' just before the parameters.
 //  utf8 module from npm to encode/decode the string. Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string
 // Encodes any given JavaScript string (string) as UTF-8, and returns the UTF-8-encoded version of the string\
-
 
 // php is a synchronous language
 
@@ -266,10 +259,9 @@
 
 //     console.log("logic exe...")
 
-
 // console.log("complete exe...")
 
-// output 
+// output
 //start exe...
 // logic exe...
 // complete exe...
@@ -288,7 +280,6 @@
 // complete exe...
 // logic exe...
 
-
 // 2nd example
 
 // let a= 10; let b= 0;
@@ -304,7 +295,6 @@
 
 // So, Now How we can handle this problem?, Now callbacks and promises comes to picture!
 
-
 // let a= 20; let b= 0;
 
 // let waitingData = new Promise((resolve, reject) => {
@@ -319,23 +309,18 @@
 // })
 /* https://felixgerschau.com/static/79486d91b22a7c1b4044fce88a4cae20/5a190/js-event-loop-explained.png */
 
-
 // How node js works?
 // 1.call stack
 //The call stack is a LIFO(Last in first out) stack, The event loop continuously checks the call stack to see if there's any function that needs to run. While doing so, it adds any functions call it finds in the call stack and execute each in order.
 
-
-
 // 2.node api
 // Node-APi is a toolkit introduced in Node 8.0.0 that acts as an intermediary between c/c++  code and the node javascript engine. it permits c/c++ code to access, create, and manipulate javascript objects as if they were created by javascript code. node api is built into versions 8.0
-
 
 // 3.callback queue
 // A function is added to the call stack when it is about to be executed. this helps javascript retrace its steps after executing a function. The callbacks queues are queues that hold callback function to asynchronous operations when they have been completed in background.
 
 // 4.example
 // 5.Interview question
-
 
 /* 
 // ---------------------------------------------------------------------- 
@@ -369,7 +354,6 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 //     res.send('hello, this is a help page');
 // })
 
-
 // app.listen(5000);
 
 // Routing in Express Js
@@ -383,7 +367,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 //     response.send("Wow by"+ request.query.name)
 // }).listen(5000)
 
-// Render HTML and JSON 
+// Render HTML and JSON
 // 1.How HTML tags
 // 2.Show Json Data
 // 3.Link Pages
@@ -406,7 +390,6 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 //     })
 
 // }).listen(5000);
-
 
 // Make Html Pages
 // 1. Make Folder for html file and access it.
@@ -434,14 +417,13 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // app.get('/contact',(_, res)=>{
 //     res.sendFile(`${publicPath}/contact.html`)
 //     })
-    
+
 //     app.get('/about',(_, res)=>{
 //         res.sendFile(`${publicPath}/about.html`)
 //         })
 //         app.get('*',(_, res)=>{
 //             res.sendFile(`${publicPath}/404.html`)
 //             })
-            
 
 // app.listen(5000);
 
@@ -478,29 +460,90 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 // console.log(publicPath)
 
-
 // Dynamic Page
 // 1. How to make loop in ejs.
 // 2. Make Header file.
 // 3. Show common header file.
 // 4. Interview Questions.
 
-const path = require('path');
-const express = require('express');
+// const path = require('path');
+// const express = require('express');
+// const app = express();
+// const publicPath = path.join(__dirname, 'views')
+
+// app.set('view engine', 'ejs')
+
+// const user = {
+//     name: "Suraj Dubey",
+//     email: "dubeysuraj864@gmail.com",
+//     city: "Delhi",
+//     skills: ["HTML","CSS/Sass/SCSS", "JavaScript","React JS", "Vue Js", "Node JS","PHP","GitHub/Git"],
+// }
+
+// app.get('/profile', (_,res)=>{
+//     res.render('profile',{user});
+// })
+
+// app.get('/login',(_, res)=>{
+//     res.render('login')
+// })
+// app.get('/header', (_, res)=>{
+//     res.render('header')
+// })
+
+// app.listen(5000)
+// ------------------------------------------
+// Middleware
+// 1.What are Middlewares.
+// Middlewares are the functions which is use with routes. With the help of Middleware we can access request and response also modification can be performed.
+// Why to modify request and response? well, we have to checked that user is logged in or not, checking the age or if we have to block the website in a specific country for that we use Middleware.
+
+// 2.How to make a Middleware.
+// Once we made Middleware then we can use it again and again.
+
+// 3.Apply Middleware on routes.
+// 4.Types of Middleware.
+// 5.Interview Questions.
+
+const { response } = require("express");
+const express = require("express");
 const app = express();
-const publicPath = path.join(__dirname, 'views')
 
-app.set('view engine', 'ejs')
+// created middleware
+const reqFilter = (req, res, next) => {
+  if (!req.query.age) {
+    res.send("please provide the age");
+  }
+  if (req.query.age < 18) {
+    res.send("You can not access this page.");
+  } else {
+    next();
+  }
+};
+// using the middleware
+app.use(reqFilter);
 
-const user = {
-    name: "Suraj Dubey",
-    email: "dubeysuraj864@gmail.com",
-    city: "Delhi",
-    skills: ["HTML","CSS/Sass/SCSS", "JavaScript","React JS", "Vue Js", "Node JS","PHP","GitHub/Git"],
-}
+app.get("", (req, res) => {
+  res.send("welcome to Home page");
+});
+app.get("/users", (req, res) => {
+  res.send("welcome to users page");
+});
 
-app.get('/profile', (_,res)=>{
-    res.render('profile',{user});
-})
- 
-app.listen(5000)
+// these was the application level middleware
+
+app.listen(5000);
+
+// types of middleware
+//-application-level middleware
+//-router-level middleware
+// -error-handling middleware
+// -build-in middleware
+// -third-party middleware
+
+// route level middleware
+// -route level middleware
+// -apply middleware in different file
+// -make middleware in the group of route
+// -apply middleware in the group of route
+// interview question
