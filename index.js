@@ -358,16 +358,58 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 */
 
-const express = require('express')
-const app = express();
+// const express = require('express')
+// const app = express();
 
-app.get('', (req, res) => {
-    res.send('hello, this is a home page');
-})
+// app.get('', (req, res) => {
+//     res.send('hello, this is a home page');
+// })
 
-app.get('/help', (req, res) => {
-    res.send('hello, this is a help page');
-})
+// app.get('/help', (req, res) => {
+//     res.send('hello, this is a help page');
+// })
 
 
-app.listen(5000);
+// app.listen(5000);
+
+// Routing in Express Js
+
+// const { application } = require("express");
+// const express = require("express");
+// const app = express();
+
+// app.get("",(request, response)=>{
+//     console.log(request.query.name);
+//     response.send("Wow by"+ request.query.name)
+// }).listen(5000)
+
+// Render HTML and JSON 
+// 1.How HTML tags
+// 2.Show Json Data
+// 3.Link Pages
+// 4.Interview Question
+
+// const express = require("express")
+// const app = express();
+// app.get("", (req, res) => {
+//     res.send(`
+//     <div style="text-align: center;"><a href="/help">Help<a> <br>
+//     <input type="text" placeholder="Type here ..." value="${req.query.name}"/>
+//     <button> Click me </button> </div>
+//     `);
+
+//     app.get("/help", (req, res)=>{
+//         res.send({
+//             name:"Suraj Dubey",
+//             email:"dubeysuraj864@gmail.com"
+//         })
+//     })
+
+// }).listen(5000);
+
+
+// Make Html Pages
+// 1. Make Folder for html file and access it.
+// 2. make html files
+// 3. load html files
+// 4. Interview Question
