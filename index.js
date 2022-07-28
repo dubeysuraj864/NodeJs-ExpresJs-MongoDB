@@ -448,7 +448,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 // app.get('/profile', (req, res)=>{
 //     const user={
-//         name: "Suraj Dubey",
+//  
 //         email: "dubeysuraj864@gmail.com",
 //         city: 'Delhi',
 //     }
@@ -474,7 +474,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // app.set('view engine', 'ejs')
 
 // const user = {
-//     name: "Suraj Dubey",
+//     name: "Surah Durey",
 //     email: "dubeysuraj864@gmail.com",
 //     city: "Delhi",
 //     skills: ["HTML","CSS/Sass/SCSS", "JavaScript","React JS", "Vue Js", "Node JS","PHP","GitHub/Git"],
@@ -505,34 +505,31 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // 4.Types of Middleware.
 // 5.Interview Questions.
 
-const { response } = require("express");
-const express = require("express");
-const app = express();
+
 
 // created middleware
-const reqFilter = (req, res, next) => {
-  if (!req.query.age) {
-    res.send("please provide the age");
-  }
-  if (req.query.age < 18) {
-    res.send("You can not access this page.");
-  } else {
-    next();
-  }
-};
+// const reqFilter = (req, res, next) => {
+//   if (!req.query.age) {
+//     res.send("please provide the age");
+//   }
+//   if (req.query.age < 18) {
+//     res.send("You can not access this page.");
+//   } else {
+//     next();
+//   }
+// };
 // using the middleware
-app.use(reqFilter);
 
-app.get("", (req, res) => {
-  res.send("welcome to Home page");
-});
-app.get("/users", (req, res) => {
-  res.send("welcome to users page");
-});
+// app.use(reqFilter);
 
-// these was the application level middleware
 
-app.listen(5000);
+//importing middleware 
+
+
+
+// these was the application level middleware, which applied to the whole route no on the single route.
+
+
 
 // types of middleware
 //-application-level middleware
@@ -547,3 +544,33 @@ app.listen(5000);
 // -make middleware in the group of route
 // -apply middleware in the group of route
 // interview question
+
+// 
+
+const express = require('express');
+const reqFilter = require('./middleware');
+const app = express();
+const route = express.Router();
+
+route.use(reqFilter);
+// app.use(reqFilter);
+
+app.get('/', (req, res) => {
+  res.send("welcome to Home page");
+});
+
+app.get('/users',  (req, res) => {
+  res.send("welcome to users page");
+});
+
+route.get('/about',  (req, res) => {
+  res.send("welcome to about page");
+});
+
+route.get('/contact', (req, res) => {
+  res.send("welcome to contact page");
+});
+
+app.use('/', route);
+
+app.listen(5000);
