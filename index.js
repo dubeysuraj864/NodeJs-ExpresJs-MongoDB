@@ -547,30 +547,99 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 // 
 
-const express = require('express');
-const reqFilter = require('./middleware');
-const app = express();
-const route = express.Router();
+// const express = require('express');
+// const reqFilter = require('./middleware');
+// const app = express();
+// const route = express.Router();
 
-route.use(reqFilter);
-// app.use(reqFilter);
+// route.use(reqFilter);
+// // app.use(reqFilter);
 
-app.get('/', (req, res) => {
-  res.send("welcome to Home page");
-});
+// app.get('/', (req, res) => {
+//   res.send("welcome to Home page");
+// });
 
-app.get('/users',  (req, res) => {
-  res.send("welcome to users page");
-});
+// app.get('/users',  (req, res) => {
+//   res.send("welcome to users page");
+// });
 
-route.get('/about',  (req, res) => {
-  res.send("welcome to about page");
-});
+// route.get('/about',  (req, res) => {
+//   res.send("welcome to about page");
+// });
 
-route.get('/contact', (req, res) => {
-  res.send("welcome to contact page");
-});
+// route.get('/contact', (req, res) => {
+//   res.send("welcome to contact page");
+// });
 
-app.use('/', route);
+// app.use('/', route);
 
-app.listen(5000);
+// app.listen(5000); 
+
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+
+
+// INSTALL MONGODB
+// Download DB
+// https://www.mongodb.com/try/download/community
+
+// install mongodb
+//complete installations
+
+// set environment for mango
+// paste the path or till mongodb file till bin in variable system to the path
+
+// mongodb compass tool
+// It is a GUI tool
+
+
+// interview question
+
+
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+//----------------------------------- 
+
+/*
+    MongoDB Basic
+    1.What is the Mongo DB
+    2.MongoDB vs SQL
+    3.MongoDB basic Commands
+    4.Interview Questions
+*/ 
+
+
+/*
+    What is mongo db
+    - mongodb is a noSQL database
+    - the data stored in a collection
+    - collection don't have row and columns
+    - data is stored in the form of object
+*/ 
+/*
+    Important commands for mongodb
+    1."show dbs" to see all your databases
+    2.To create "use database_name"
+    3.To see in db "db.createCollection('collection_name')"
+    4.To see all collections "show collections" 
+    5.For delete the collection "db.collection_name.drop()"
+    6.For deleting the database itself "db.dropDatabase()u"
+*/ 
+
+/*
+        Crud Operations in MongoDB
+        -How to insert data Collection
+        -How to check inserted data
+        -How to update data
+        -How to delete data
+        -Interview Questions
+
+*/ 
