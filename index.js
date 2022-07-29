@@ -636,10 +636,21 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 /*
         Crud Operations in MongoDB
+        //first create the database and its collections
         -How to insert data Collection
+            1."use database_name"
+            2.db.collection_name.insertOne({name:"damn nigga",email:"damnit@icloud.com", rollNo: 69})
+
+
         -How to check inserted data
+            3.db.collection_name.find()
+
         -How to update data
+            4.db.products.updateOne({name:"6s"},{$set:{price:650}})
+
         -How to delete data
+            5.db.products.deleteOne({attribute_name:"attribute_value"})
+
         -Interview Questions
 
 */ 
