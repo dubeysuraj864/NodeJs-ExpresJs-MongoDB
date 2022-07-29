@@ -654,3 +654,30 @@ uses- We can make APIs using Express js with less code than node js. provide rou
         -Interview Questions
 
 */ 
+
+
+/*
+    Connect Node with MongoDB
+    -Install MongoDB Package
+    // npm i mongodb
+
+    -Connect MongoDB with Node.js
+    -Show Data from MongoDB
+    -Interview Questions
+    // Can we connect to two databases together?
+*/ 
+
+const {MongoClient} = require('mongodb')
+const url = 'mongodb://localhost:27017';
+const database = 'e-commerce'
+const client = new MongoClient(url);
+
+async function getData(){
+    let result = await client.connect();
+    let db = result.db(database);
+    let collection = db.collection('products');
+    let response = await collection.find().toArray();
+    console.log(response);
+}
+
+getData();
