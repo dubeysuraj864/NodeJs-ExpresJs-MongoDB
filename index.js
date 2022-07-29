@@ -448,7 +448,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 // app.get('/profile', (req, res)=>{
 //     const user={
-//  
+//
 //         email: "dubeysuraj864@gmail.com",
 //         city: 'Delhi',
 //     }
@@ -505,8 +505,6 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // 4.Types of Middleware.
 // 5.Interview Questions.
 
-
-
 // created middleware
 // const reqFilter = (req, res, next) => {
 //   if (!req.query.age) {
@@ -522,14 +520,9 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 // app.use(reqFilter);
 
-
-//importing middleware 
-
-
+//importing middleware
 
 // these was the application level middleware, which applied to the whole route no on the single route.
-
-
 
 // types of middleware
 //-application-level middleware
@@ -545,7 +538,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // -apply middleware in the group of route
 // interview question
 
-// 
+//
 
 // const express = require('express');
 // const reqFilter = require('./middleware');
@@ -573,18 +566,17 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 // app.use('/', route);
 
-// app.listen(5000); 
+// app.listen(5000);
 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
 
 // INSTALL MONGODB
 // Download DB
@@ -599,14 +591,12 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 // mongodb compass tool
 // It is a GUI tool
 
-
 // interview question
 
-
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
-//----------------------------------- 
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
+//-----------------------------------
 
 /*
     MongoDB Basic
@@ -614,8 +604,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
     2.MongoDB vs SQL
     3.MongoDB basic Commands
     4.Interview Questions
-*/ 
-
+*/
 
 /*
     What is mongo db
@@ -623,7 +612,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
     - the data stored in a collection
     - collection don't have row and columns
     - data is stored in the form of object
-*/ 
+*/
 /*
     Important commands for mongodb
     1."show dbs" to see all your databases
@@ -632,7 +621,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
     4.To see all collections "show collections" 
     5.For delete the collection "db.collection_name.drop()"
     6.For deleting the database itself "db.dropDatabase()u"
-*/ 
+*/
 
 /*
         Crud Operations in MongoDB
@@ -653,8 +642,7 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
         -Interview Questions
 
-*/ 
-
+*/
 
 /*
     Connect Node with MongoDB
@@ -665,19 +653,49 @@ uses- We can make APIs using Express js with less code than node js. provide rou
     -Show Data from MongoDB
     -Interview Questions
     // Can we connect to two databases together?
-*/ 
+*/
 
-const {MongoClient} = require('mongodb')
-const url = 'mongodb://localhost:27017';
-const database = 'e-commerce'
-const client = new MongoClient(url);
+// const { MongoClient } = require("mongodb");
+// const url = "mongodb://localhost:27017";
+// const database = "e-commerce";
+// const client = new MongoClient(url);
 
-async function getData(){
-    let result = await client.connect();
-    let db = result.db(database);
-    let collection = db.collection('products');
-    let response = await collection.find().toArray();
-    console.log(response);
+// async function dbConnection() {
+//   let result = await client.connect();
+//   let db = result.db(database);
+//   return (collection = db.collection("products"));
+//   // let response = await collection.find({category:'tablets'}).toArray();
+//   // console.log(response);
+// }
+// dbConnection().then((resp) => {
+//   resp
+//     .find()
+//     .toArray()
+//     .then((data) => {
+//       console.log(data);
+//     });
+// });
+// -----------------------------------------------------------
+/*
+    Read Data from MongoDB
+    - Read Data from MongoDB
+    - Make file for DB connection
+    - Handle promise
+    - Interview Questions
+*/
+
+
+const dbConnection = require('./mongodb');
+
+const  main= async ()=>{ 
+    let data = await dbConnection();
+    data = data.find().toArray().then((data)=>{
+        console.log(data)
+    })
+    console.warn(data);
 }
 
-getData();
+main();
+
+
+
