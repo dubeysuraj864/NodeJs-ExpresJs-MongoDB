@@ -712,5 +712,23 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 
 const dbConnection = require('./mongodb');
 // const insertion = require('./insert');
-// const update = require('./update');
-const update = require('./Delete'); 
+// // const update = require('./update');
+// const update = require('./Delete'); 
+
+
+/*
+    API With MongoDB
+    - Make New File for API
+    - Import and use Mongo Config
+    - Make API for get Data
+    - Test with postman
+    - Interview Questions
+*/ 
+
+
+// get -  GET method is used to retrieve data from a server at the specified resource
+// post - POST requests are used to send data to the API server to create or update a resource.
+// put - PUT method is used to update an existing record in the data source in the RESTful architecture
+// delete - DELETE request is used to delete an existing record in the data source in the RESTful architecture
+
+
