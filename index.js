@@ -685,17 +685,30 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 */
 
 
+// const dbConnection = require('./mongodb');
+
+// const  main= async ()=>{ 
+//     let data = await dbConnection();
+//     data = data.find().toArray().then((data)=>{
+//         console.log(data)
+//     })
+//     console.warn(data);
+// }
+
+// main();
+
+
+
+/*
+        Insert Data from MongoDB
+        -make new file for insert data
+        -import mongodb connection
+        -insert single and multiple records
+        // array
+
+        -interview questions
+*/ 
+
+
 const dbConnection = require('./mongodb');
-
-const  main= async ()=>{ 
-    let data = await dbConnection();
-    data = data.find().toArray().then((data)=>{
-        console.log(data)
-    })
-    console.warn(data);
-}
-
-main();
-
-
-
+const insertion = require('./insert');
