@@ -713,4 +713,4 @@ uses- We can make APIs using Express js with less code than node js. provide rou
 const dbConnection = require('./mongodb');
 // const insertion = require('./insert');
 // const update = require('./update');
-const update = require('./Delete');
+const update = require('./Delete'); 

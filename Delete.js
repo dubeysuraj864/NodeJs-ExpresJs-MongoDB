@@ -4,6 +4,7 @@ const deleteItems = async() =>{
     let result = db.deleteOne({
        name:"Macbook M1"
     })
+    console.log("record deleted")
 }
 
 deleteItems();
