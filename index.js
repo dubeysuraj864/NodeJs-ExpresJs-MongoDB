@@ -706,9 +706,11 @@ uses- We can make APIs using Express js with less code than node js. provide rou
         -insert single and multiple records
         // array
 
-        -interview questions
+        -interview questions 
 */ 
 
 
 const dbConnection = require('./mongodb');
-const insertion = require('./insert');
+// const insertion = require('./insert');
+// const update = require('./update');
+const update = require('./Delete');
